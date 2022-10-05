@@ -1,0 +1,12 @@
+
+
+.row{
+    width: 100%;
+    background-color: lightblue;
+    border: 2px solid black;
+}
+
+.row div{
+    padding:20px;
+    border: 2px solid blue;
+}
