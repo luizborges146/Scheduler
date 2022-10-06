@@ -1,9 +1,11 @@
 # Description
 
-This project applies all the skills learned on week 2 of the Bootcamp, the focus is JavaScript and how to manipulate variables, functions and access user input from the web. 
-With that, I was able to create a user Password Generator, where the user can enter a number between 8 and 128, and add some criteria: NUMBERS, UPPERCASE, LOWERCASE and SYMBOLS. As mentioned the user will have the option to select only the criteria that apply to it. I also combine to this project, user responses, in case the user decide to go outside of the range, or add a number, or even live empty, so the user would receive a message for each information as an alert to inform that input is not acceptable, and it should add numbers instead. The user also has an option to cancel the program in case it does not want to generate a password.
+This project applies all the skills learned on week 3 of the Bootcamp, the focus is APIs functions and access user input from the web, also explore templates from BootStrapa and jQuery. 
+The scheduler is a system to support the user to create a TODO list, so they can organise their day to work. The timer on the top of the page will help the user to check the current time, and also, the field where the user add the information, will change color according the time.
 
-### Link to the password generator: [Password Generator](https://luizborges146.github.io/hw.password-generator/)
+
+
+### Link to the Scheduler: [Scheduler](https://luizborges146.github.io/Scheduler/)
 
 ## Installation
 
@@ -11,45 +13,41 @@ N/A
 
 ## Usage
 
-* Functionalities:.
- * Allow user to add number between 8 and 128
- * In case user add a different number range, letter, symbol or nothing, the web will trigger an alert to inform the user that, the information added is not acceptable and bring the user to the first part again, to add the number.
- * User will be asked to select the criteria they want in the password,<Numbers, Lowercase, Uppercase, Symbols>, in case user does not accept any of the criteria, an confirm option will appear, asking the user to chose between be back to the add number part or to exit.
- * Once the user select the criteria it wants and the length, the system will generate the password.
- * User does not need to refresh the page to re-generate the password, it just need to click "Generate Password" on the screen.
+* Functionalities:
+ * Allow user to add information on the text box.
+ * Information will be saved in localStorage, so even if the user reload the page, the information will ramin there.
+ * Timer will be displayed at the top of the page
+ * The user input field, change color according the time:
+        * Gray - represents the past.
+        * Red - represents the current time.
+        * Green - represents the upcoming time.
 
+ 
+#### Function below represents the time and also the schedule to change the field color, as the time runs, the field will change color automatically, there is no need for the user to click in the reload page to check the information.
  ```
-var input = prompt("How many characters would you like to be?\n Between 8 to 128 character ");
-  if (input >=8 && input <=128) {
-    passSize = input;
-    promptNumber();
-  } else if (input === null){
-    return;
-  } else if(input > 128) {
-    alert("You added a number that is bigger than 128.\n Please add a number between 8 - 128!");
-    userInput();
-  }  else if(input < 8) {
-    alert("You added a number that is lower than 8.\n Please add a number between 8 - 128!");
-    userInput();
-  } else {
-    alert("Hey, it seems that you added something different from a number!\n Please add a number between 8 - 128!");
-    userInput();
-  }
+var updateTime = function () {
+    var currentDate = moment().format("dddd, MMMM DD YYYY");
+    var currentTime = moment().format(':mm:ss');
+    var currentHour = moment().format('HH');
+    $("#timer").text(currentDate + " --   " + currentHour + currentTime)
+    var timeColor = document.querySelectorAll("input");
+    // console.log(timeColor.length);
+    // console.log(typeof(currentHour));
 
-  function checkAllOptions (){// create a new function to check if the user will add all the option as false
-  if (number === false &&
-    upperCase === false &&
-    lowerCase === false &&
-    symbol=== false) {
-      alert("Hey, it seems that you did not select any criteria to generate your password!");
-      var option = confirm("Press ok to start over or \ncancel, to leave the application!");
-      if (confirm === true) {
-        userInput();
-      } else if (confirm === false) {
-        return;
-      }
+    for (var i = 0; i < timeColor.length; i++) {
+        console.log(timeColor[i]);
+        if ((i + 9) < currentHour) {
+            timeColor[i].classList.add("beforeTime");//gray
+        } else if (i + 9 == currentHour){
+            timeColor[i].classList.add("onTime"); //red
+        } else if (i + 9 >= currentHour) {
+            timeColor[i].classList.add("afterTime"); //green
+        }
     }
-}
+
+ }
+updateTime()
+setInterval(updateTime, 1000);
 
  ```
 
@@ -78,19 +76,3 @@ N/A
 ## License
 
 Please refer to the LICENSE in the repo.
-
-
-
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
