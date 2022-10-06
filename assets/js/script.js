@@ -21,22 +21,24 @@ var updateTime = function () {
     // console.log(typeof(currentHour));
 
     for (var i = 0; i < timeColor.length; i++) {
+        console.log(timeColor[i]);
         if ((i + 9) < currentHour) {
-            timeColor[i].classList.add("beforeTime");
+            timeColor[i].classList.add("beforeTime");//gray
         } else if (i + 9 == currentHour){
-            timeColor[i].classList.add("onTime");
+            timeColor[i].classList.add("onTime"); //red
         } else if (i + 9 > currentHour) {
-            timeColor[i].classList.add("afterTime");
+            timeColor[i].classList.add("afterTime"); //green
         }
     }
-    // timeColor[0].classList.add("beforeTime");
-}
+//     // timeColor[0].classList.add("beforeTime");
+ }
 updateTime()
 setInterval(updateTime, 1000);
 
+
+
 /* ---------------------------------------------------------------------------*/
 
-in09.setAttribute
 
 //------ create a function to save the information inside the div
 
@@ -111,22 +113,22 @@ function displayMessage() {
 
 displayMessage(); //--------------------- this need to be logged after the variable was set 
 
-function addInfo2() {
+// function addInfo2() {
     
-    var input11 = document.getElementById("input11");
-    var input12 = document.getElementById("input12");
-    var input13 = document.getElementById("input13");
-    var input14 = document.getElementById("input14");
-    var input15 = document.getElementById("input15");
-    var input16 = document.getElementById("input16");
-    var input17 = document.getElementById("input17");
+//     var input11 = document.getElementById("input11");
+//     var input12 = document.getElementById("input12");
+//     var input13 = document.getElementById("input13");
+//     var input14 = document.getElementById("input14");
+//     var input15 = document.getElementById("input15");
+//     var input16 = document.getElementById("input16");
+//     var input17 = document.getElementById("input17");
      
-    localStorage.setItem("input11", in11.value); 
-    localStorage.setItem("input12", in12.value); 
-    localStorage.setItem("input13", in13.value); 
-    localStorage.setItem("input14", in14.value); 
-    localStorage.setItem("input15", in15.value); 
-    localStorage.setItem("input16", in16.value); 
-    localStorage.setItem("input17", in17.value); 
+//     localStorage.setItem("input11", in11.value); 
+//     localStorage.setItem("input12", in12.value); 
+//     localStorage.setItem("input13", in13.value); 
+//     localStorage.setItem("input14", in14.value); 
+//     localStorage.setItem("input15", in15.value); 
+//     localStorage.setItem("input16", in16.value); 
+//     localStorage.setItem("input17", in17.value); 
       
-}
+// }
