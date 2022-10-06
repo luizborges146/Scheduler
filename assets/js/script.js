@@ -12,10 +12,10 @@ var in17 = document.getElementById("input17");
 
 //-----------------Set the timer --------------------------------
 var updateTime = function () {
-    var currentDate = moment().format("ddd, MMMM DD YYYY");
+    var currentDate = moment().format("dddd, MMMM DD YYYY");
     var currentTime = moment().format(':mm:ss');
     var currentHour = moment().format('HH');
-    $("#timer").text(currentDate + "    " + currentHour + currentTime)
+    $("#timer").text(currentDate + " --\n   " + currentHour + currentTime)
     var timeColor = document.querySelectorAll("input");
     // console.log(timeColor.length);
     // console.log(typeof(currentHour));
@@ -113,22 +113,3 @@ function displayMessage() {
 
 displayMessage(); //--------------------- this need to be logged after the variable was set 
 
-// function addInfo2() {
-    
-//     var input11 = document.getElementById("input11");
-//     var input12 = document.getElementById("input12");
-//     var input13 = document.getElementById("input13");
-//     var input14 = document.getElementById("input14");
-//     var input15 = document.getElementById("input15");
-//     var input16 = document.getElementById("input16");
-//     var input17 = document.getElementById("input17");
-     
-//     localStorage.setItem("input11", in11.value); 
-//     localStorage.setItem("input12", in12.value); 
-//     localStorage.setItem("input13", in13.value); 
-//     localStorage.setItem("input14", in14.value); 
-//     localStorage.setItem("input15", in15.value); 
-//     localStorage.setItem("input16", in16.value); 
-//     localStorage.setItem("input17", in17.value); 
-      
-// }

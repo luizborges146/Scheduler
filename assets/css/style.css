@@ -56,7 +56,7 @@ body{
     border-color: black;
     font-size: 1.2em;
     box-shadow: 0 0 2px 1px;
-    background-color: green;
+    background-color: rgb(138, 135, 135);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     
@@ -75,6 +75,7 @@ div input{
     /*border: 2px solid green; remove it, just checking the marks*/
     text-align:start;
     color:var(--white-color);
+    cursor:auto;
 ;}
 
 div .col-10{ /*take the input that the user will add to the system*/
