@@ -75,7 +75,7 @@ div input{
     /*border: 2px solid green; remove it, just checking the marks*/
     text-align:start;
     color:var(--white-color);
-    cursor:auto;
+    
 ;}
 
 div .col-10{ /*take the input that the user will add to the system*/

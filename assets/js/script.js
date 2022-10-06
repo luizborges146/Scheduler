@@ -15,7 +15,7 @@ var updateTime = function () {
     var currentDate = moment().format("dddd, MMMM DD YYYY");
     var currentTime = moment().format(':mm:ss');
     var currentHour = moment().format('HH');
-    $("#timer").text(currentDate + " --\n   " + currentHour + currentTime)
+    $("#timer").text(currentDate + " --   " + currentHour + currentTime)
     var timeColor = document.querySelectorAll("input");
     // console.log(timeColor.length);
     // console.log(typeof(currentHour));
