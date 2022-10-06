@@ -26,11 +26,11 @@ var updateTime = function () {
             timeColor[i].classList.add("beforeTime");//gray
         } else if (i + 9 == currentHour){
             timeColor[i].classList.add("onTime"); //red
-        } else if (i + 9 > currentHour) {
+        } else if (i + 9 >= currentHour) {
             timeColor[i].classList.add("afterTime"); //green
         }
     }
-//     // timeColor[0].classList.add("beforeTime");
+
  }
 updateTime()
 setInterval(updateTime, 1000);

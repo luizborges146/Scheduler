@@ -86,7 +86,7 @@ div .col-10{ /*take the input that the user will add to the system*/
 /*-----------------------------------------------------------------------*/
 
 .beforeTime {
-    background-color: gray;
+    background-color: rgb(138, 135, 135);
     color:black;
 }
 
