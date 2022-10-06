@@ -1,17 +1,4 @@
 
-//-----------------Set the timer --------------------------------
-var updateTime = function () {
-    var currentDate = moment().format("ddd, MMMM DD YYYY");
-    var currentTime = moment().format(':mm:ss');
-    var currentHour = moment().format('HH');
-    $("#timer").text(currentDate + "    " + currentHour + currentTime)
-    // var timeColor = document.querySelectorAll("input");
-    // console.log(timeColor.length);
-}
-updateTime()
-setInterval(updateTime, 1000);
-
-/* ---------------------------------------------------------------------------*/
 var in09 = document.getElementById("input09"); 
 var in10 = document.getElementById("input10");
 var in11 = document.getElementById("input11");
@@ -23,6 +10,33 @@ var in16 = document.getElementById("input16");
 var in17 = document.getElementById("input17");
 
 
+//-----------------Set the timer --------------------------------
+var updateTime = function () {
+    var currentDate = moment().format("ddd, MMMM DD YYYY");
+    var currentTime = moment().format(':mm:ss');
+    var currentHour = moment().format('HH');
+    $("#timer").text(currentDate + "    " + currentHour + currentTime)
+    var timeColor = document.querySelectorAll("input");
+    // console.log(timeColor.length);
+    // console.log(typeof(currentHour));
+
+    for (var i = 0; i < timeColor.length; i++) {
+        if ((i + 9) < currentHour) {
+            timeColor[i].classList.add("beforeTime");
+        } else if (i + 9 == currentHour){
+            timeColor[i].classList.add("onTime");
+        } else if (i + 9 > currentHour) {
+            timeColor[i].classList.add("afterTime");
+        }
+    }
+    // timeColor[0].classList.add("beforeTime");
+}
+updateTime()
+setInterval(updateTime, 1000);
+
+/* ---------------------------------------------------------------------------*/
+
+in09.setAttribute
 
 //------ create a function to save the information inside the div
 
