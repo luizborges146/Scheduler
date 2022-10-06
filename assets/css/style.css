@@ -59,10 +59,27 @@ div input{
     background-color: var(--light-back-c);
     /*border: 2px solid green; remove it, just checking the marks*/
     text-align:start;
-}
+    color:var(--white-color);
+;}
 
 div .col-10{ /*take the input that the user will add to the system*/
 
     margin:0px;
     padding:0px
+}
+
+/*-----------------------------------------------------------------------*/
+
+.beforeTime {
+    background-color: gray;
+    color:black;
+}
+
+.onTime {
+    background-color: rgb(175, 54, 54);
+
+}
+
+.afterTime {
+    background-color: rgb(52, 129, 87);
 }
