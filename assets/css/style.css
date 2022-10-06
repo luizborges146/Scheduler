@@ -1,15 +1,54 @@
+:root{
+    --dark-back-c:#71a8a7;;/* set up two background color DARK*/
+    --light-back-c:#d5f5f5;/* set up two background color light*/
+    --white-color:rgb(226, 226, 226);/*white color is too bright, so i created a off-white color to help with the visual*/
+}
 
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+}
 
-.row{
+body{
+    background-color: var(--light-back-c);
+}
+
+.jumbotron{
     
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--dark-back-c);
+    border-radius: 0.3rem;
+}
+
+.jumbotron-fluid{
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+    margin-bottom:0;
+    
+}
+
+.jumbotron-fluid .container{
+    background-color: var(--dark-back-c);
+    color: var(--white-color);
+}
+
+.row{ 
     width: 100%;
     background-color: lightyellow;
-    border: 5px solid black;
+    /* border: 5px solid black; */
+    border: 0.5px solid blue;/*remove it, just checking the marks */
+    margin-bottom: 0px;
 }
 
 .row div{
     padding:20px;
-    border: 2px solid blue;
+    border-radius: 5px;
     
 }
 
@@ -18,13 +57,13 @@ div input{
     margin: 0px;
     width: 100%;
     height: 100%;
-    background-color: aqua;
-    border: 2px solid green;
+    background-color: var(--light-back-c);
+    /*border: 2px solid green; remove it, just checking the marks*/
     text-align:start;
 }
 
 div .col-10{ /*take the input that the user will add to the system*/
-    background-color: black;
+
     margin:0px;
     padding:0px
 }
