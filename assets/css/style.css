@@ -45,6 +45,21 @@ body{
     border: 0.5px solid blue;/*remove it, just checking the marks */
     margin-bottom: 0px;
     border-radius: 10px;
+    font-weight: bolder;
+}
+
+.pointer{
+    cursor:pointer;
+}
+
+.pointer:hover{
+    border-color: black;
+    font-size: 1.2em;
+    box-shadow: 0 0 2px 1px;
+    background-color: green;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
 }
 
 .row div{
