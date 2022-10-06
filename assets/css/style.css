@@ -1,6 +1,6 @@
 :root{
-    --dark-back-c:#71a8a7;;/* set up two background color DARK*/
-    --light-back-c:#d5f5f5;/* set up two background color light*/
+    --dark-back-c:rgb(11,11,26);/* set up two background color DARK*/
+    --light-back-c:rgb(27,27,59);/* set up two background color light*/
     --white-color:rgb(226, 226, 226);/*white color is too bright, so i created a off-white color to help with the visual*/
 }
 
@@ -44,12 +44,11 @@ body{
     /* border: 5px solid black; */
     border: 0.5px solid blue;/*remove it, just checking the marks */
     margin-bottom: 0px;
+    border-radius: 10px;
 }
 
 .row div{
-    padding:20px;
-    border-radius: 5px;
-    
+    padding:20px;   
 }
 
 div input{

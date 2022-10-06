@@ -14,8 +14,11 @@ setInterval(updateTime, 1000);
 
 //------ create a function to save the information inside the div
 
-function addInfo(input) {
-    var inputText = document.getElementById("userInput");
+function addInfo1(input) {
+    var inputText = document.getElementById('currentTime');
     inputText.textContent = input.value;
+    console.log(input.value);
     
+
 }
+

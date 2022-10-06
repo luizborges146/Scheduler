@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
@@ -14,16 +13,18 @@
     <!-- ---------------------------------------Timer------------------- -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Current time</h1>
+          <h1 id="currentTime" class="display-4">Current time</h1>
           <h3 id="timer"></h3>
         </div>
     </header>
 <!-- ----------------------------------------User input  ------------------- -->
+
     <main class="container">
         <div class="row">
             <div class="col-1">09:00 Am</div>
             <div class="col-10">
-                <input id="userInput" type="text" onchange="addInfo(input)">
+                <!-- <input id="input" type="text" onchange="changeH1(input)"> -->
+                <input id="input" type="text" onchange="addInfo1(input)">
             </div>
             <div class="col-1">Save</div>
           </div>
