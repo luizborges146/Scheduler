@@ -1,4 +1,4 @@
-
+// Global variables to get the user input information
 var in09 = document.getElementById("input09"); 
 var in10 = document.getElementById("input10");
 var in11 = document.getElementById("input11");
@@ -14,7 +14,7 @@ var in17 = document.getElementById("input17");
 var updateTime = function () {
     var currentDate = moment().format("dddd, MMMM DD YYYY");
     var currentTime = moment().format(':mm:ss');
-    var currentHour = moment().format('HH');
+    var currentHour = moment().format('HH');//added the hour sepate to compara in the for loop, so I can change the field color acording to the the hour
     $("#timer").text(currentDate + " --   " + currentHour + currentTime)
     var timeColor = document.querySelectorAll("input");
     // console.log(timeColor.length);
@@ -33,22 +33,20 @@ var updateTime = function () {
 
  }
 updateTime()
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1000); // set interval every second, so the time is displayed properly
 
 
 
 /* ---------------------------------------------------------------------------*/
 
 
-//------ create a function to save the information inside the div
+//------ create a functions to store in the local storage
 
 function addInfo() {
-    //var input9 = document.getElementById('currentTime');
-    //input9.textContent = input.value;
     localStorage.setItem("input09", in09.value); 
 }
 
-/* ---------------------------------------------------------*/
+
 
 function addInfo10(){
     localStorage.setItem("input10", in10.value);
@@ -81,7 +79,7 @@ function addInfo16(){
 function addInfo17(){
     localStorage.setItem("input17", in17.value);
 }
-
+ // function to get the infoamration from local storage and display it to the user
 function displayMessage() {
     var input09 = localStorage.getItem("input09");
     in09.value = input09;
@@ -111,5 +109,5 @@ function displayMessage() {
     in17.value = input17;
 }
 
-displayMessage(); //--------------------- this need to be logged after the variable was set 
+displayMessage(); //--- this need to be logged after the variable was set, save the information on the user input
 
